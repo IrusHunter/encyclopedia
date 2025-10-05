@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Зворотній зв'язок</title>
+  </head>
+  <body>
+    <header>
+      <h1>Контейнерономіка</h1>
+      <img src="media/logo.png" alt="Логотип" width="400" />
+    </header>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="containers.html">Розділ про контейнери</a>
+      <a href="">Розділ про розіграші</a>
+      <a href="feedback.html">Зворотній зв'язок</a>
+    </nav>
+
+    <main>
+      <form>
+        <fieldset>
+          <legend>Персональна інформація</legend>
+          <label for="second-name">Прізвище</label>
+          <input type="text" id="second-name" required pattern="^[А-Яа-яЇїІіЄєҐґA-Za-z'-]$" />
+
+          <label for="first-name">Ім'я</label>
+          <input type="text" id="first-name" required pattern="^[А-Яа-яЇїІіЄєҐґA-Za-z'-]$" />
+
+          <label for="email">Електрона пошта</label>
+          <input type="email" id="email" required />
+
+          <label for="age">Вік</label>
+          <input type="number" id="age" required max="140" min="0" />
+        </fieldset>
+
+        <label for="education">Освіта</label>
+        <input type="text" id="education" list="education-list" />
+        <datalist id="education-list">
+          <option>повна</option>
+          <option>неповна</option>
+          <option>вища</option>
+          <option>професійна</option>
+        </datalist>
+
+        <label for="feedback">Мета зворотного зв'язку</label>
+        <select id="feedback">
+          <option>співпраця</option>
+          <option>скарга</option>
+          <option>пропозиція</option>
+          <option>вказати на помилку</option>
+        </select>
+
+        <label for="detail">Детально</label>
+        <textarea id="detail" maxlength="2000" cols="100" rows="20"></textarea>
+
+        <input type="checkbox" id="consent" required />
+        <label for="consent">Даю згоду на обробку персональної інформації</label>
+
+        <button type="submit">Відправити</button>
+      </form>
+    </main>
+  </body>
+</html>
