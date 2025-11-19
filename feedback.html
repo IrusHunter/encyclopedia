@@ -2,16 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Зворотній зв'язок</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/feedback.css" />
   </head>
   <body>
     <header>
-      <h1>Контейнерономіка</h1>
-      <img src="media/logo.png" alt="Логотип" width="400" />
+      <a href="index.html">
+        <h1>Контейнерономіка</h1>
+        <img class="logo" src="media/logo.png" alt="Логотип" width="400" />
+      </a>
+
       <nav>
-        <a href="index.html">Головна</a>
-        <a href="containers.html">Розділ про контейнери</a>
-        <a href="">Розділ про розіграші</a>
+        <!-- <a href="index.html">Головна</a> -->
+        <a href="containers.html">Контейнери</a>
+        <a href="">Розіграші</a>
         <a href="feedback.html">Зворотній зв'язок</a>
       </nav>
     </header>
@@ -45,17 +60,18 @@
         <label for="feedback">Мета зворотного зв'язку</label>
         <select id="feedback">
           <option>співпраця</option>
-          <option>скарга</option>
+          <option value="error">скарга</option>
           <option>пропозиція</option>
-          <option>вказати на помилку</option>
+          <option value="error">вказати на помилку</option>
         </select>
 
         <label for="detail">Детально</label>
-        <textarea id="detail" maxlength="2000" cols="100" rows="20"></textarea>
+        <textarea id="detail" maxlength="2000" rows="10"></textarea>
 
-        <input type="checkbox" id="consent" required />
-        <label for="consent">Даю згоду на обробку персональної інформації</label>
-
+        <div class="checkbox-container">
+          <input type="checkbox" id="consent" required />
+          <label for="consent">Даю згоду на обробку персональної інформації</label>
+        </div>
         <button type="submit">Відправити</button>
       </form>
     </main>

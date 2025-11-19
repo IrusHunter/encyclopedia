@@ -1,0 +1,113 @@
+head {
+  position: absolute;
+  margin-top: 0px;
+}
+
+#purpose-article {
+  margin: 0px 20px 0px 20px;
+  padding: 0px 10px 0px 10px;
+  width: auto;
+}
+
+article p::first-line {
+  font-style: italic;
+}
+
+main:hover {
+  margin-top: 3%;
+  background-color: var(--main-background-lighter-color);
+  padding: 0 2em;
+}
+
+footer {
+  position: relative;
+}
+
+footer .bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(50, 255, 50), rgb(31, 101, 31));
+  opacity: 0;
+  z-index: -1;
+}
+
+footer:hover .bg {
+  transition-delay: 3s;
+  opacity: 1;
+}
+
+table {
+  display: block;
+  overflow: auto;
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+
+  float: right;
+  position: relative;
+
+  border-collapse: collapse;
+  margin: 2em 0 2em 0.5em;
+  background-color: var(--main-background-lighter-color);
+  border: 1px solid var(--separator-color);
+}
+
+table thead {
+  background-color: #1a1a1a;
+}
+
+table th {
+  font-family: var(--headers-font);
+  font-weight: 400;
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 2px solid var(--separator-color);
+  color: var(--extra-color);
+}
+
+table td {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid var(--separator-color);
+  color: var(--main-color);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  table th,
+  table td {
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+  table {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+}
+
+main {
+  display: grid;
+  row-gap: 5%;
+  padding: 0 1em;
+
+  align-content: start;
+}
+
+article .about {
+  margin: 2em 0;
+}
+
+@media (max-width: 768px) {
+  article .about {
+    margin: 1em 0;
+  }
+}
+
+article:last-child {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0 0 20% 0;
+}

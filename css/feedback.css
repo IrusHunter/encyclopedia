@@ -1,0 +1,110 @@
+select [value="error"] {
+  color: red;
+}
+
+main {
+  padding: 1em;
+  max-width: 800px;
+  margin: auto;
+}
+
+form,
+fieldset {
+  display: flex;
+  flex-flow: column wrap;
+  /* justify-content: left; */
+  align-items: stretch;
+  /* align-content: flex-start; */
+}
+
+fieldset {
+  /* background: var(--main-background-lighter-color); */
+  border: 1px solid var(--separator-color);
+  border-radius: 6px;
+  margin: 2em 0;
+
+  padding: 1.5em;
+  padding-top: 0;
+  transition-duration: 0.25s;
+}
+
+fieldset:hover {
+  border-color: var(--extra-color);
+  box-shadow: 0 0 6px var(--extra-color);
+}
+
+fieldset legend {
+  font-family: var(--headers-font);
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--main-color);
+  text-align: center;
+  background: none;
+}
+
+label {
+  margin: 1em 0 0.3em;
+  font-weight: 200;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+  background: var(--main-background-lighter-color);
+  border: 1px solid var(--separator-color);
+  border-radius: 6px;
+  padding: 0.6em 0.8em;
+  font-size: 1em;
+  color: var(--main-color);
+  transition-duration: 0.25s;
+  outline: none;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--extra-color);
+  box-shadow: 0 0 6px var(--extra-color);
+}
+
+form input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  accent-color: var(--extra-color);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1em;
+}
+.checkbox-container label {
+  margin: 0;
+}
+
+form button {
+  margin-top: 2em;
+  padding: 0.7em 1em;
+  background: var(--main-background-lighter-color);
+  color: var(--main-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--headers-font);
+  font-size: 1.1em;
+  font-weight: 400;
+  transition-duration: 0.2s;
+}
+form button:hover {
+  border-color: var(--extra-color);
+  box-shadow: 0 0 12px var(--extra-color);
+}
+
+@media (max-width: 768px) {
+  fieldset {
+    padding: 1.5em 0.5em;
+  }
+}
