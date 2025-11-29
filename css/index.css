@@ -75,19 +75,6 @@ table tr:last-child td {
   border-bottom: none;
 }
 
-@media (max-width: 768px) {
-  table th,
-  table td {
-    padding: 0.5em;
-    font-size: 0.9em;
-  }
-  table {
-    float: none;
-    width: auto;
-    margin: 0;
-  }
-}
-
 main {
   display: grid;
   row-gap: 5%;
@@ -100,14 +87,32 @@ article .about {
   margin: 2em 0;
 }
 
-@media (max-width: 768px) {
-  article .about {
-    margin: 1em 0;
-  }
-}
-
 article:last-child {
   min-width: 0;
   overflow: hidden;
   padding: 0 0 20% 0;
+}
+
+.duck-image {
+  object-fit: contain;
+  position: absolute;
+  pointer-events: none;
+  left: -150px;
+}
+
+@media (max-width: 768px) {
+  table th,
+  table td {
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+  table {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  article .about {
+    margin: 1em 0;
+  }
 }

@@ -24,16 +24,19 @@
       </a>
 
       <nav>
-        <!-- <a href="index.html">Головна</a> -->
-        <a href="containers.html">Контейнери</a>
-        <a href="">Розіграші</a>
-        <a href="feedback.html">Зворотній зв'язок</a>
+        <section class="search-box">
+          <label for="search-input">Пошук:</label>
+          <input id="search-input" type="text" />
+        </section>
+
+        <p class="accordion">&#x2261;</p>
+        <ul class="accordion-content"></ul>
       </nav>
     </header>
 
     <main class="tmp-class">
       <dl>
-        <dt>Контейнер FVE Defender</dt>
+        <dt id="1">Контейнер FVE Defender</dt>
         <dd>
           <img src="media/containers/fve_defender.jpg" alt="Контейнер FVE Defender" width="200" />
           <div>
@@ -47,7 +50,7 @@
             <p class="author-paragraph">Автор: WarGaming Group</p>
           </div>
         </dd>
-        <dt>Контейнер "Погана Компанія"</dt>
+        <dt id="2">Контейнер "Погана Компанія"</dt>
         <dd>
           <img src="media/containers/bad_company.jpg" alt="Контейнер &#34;Погана Компанія&#34;" width="200" />
           <div>
@@ -64,4 +67,5 @@
 
     <footer></footer>
   </body>
+  <script src="js/containers.js"></script>
 </html>

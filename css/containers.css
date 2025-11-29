@@ -11,11 +11,6 @@ a:visited {
   opacity: 0.8;
 }
 
-header {
-  position: fixed;
-  width: 88%;
-}
-
 main dl {
   margin: 0 1em;
   display: grid;
@@ -65,9 +60,72 @@ main dd p {
   text-align: justify;
 }
 
-main.tmp-class {
-  padding-top: 120px;
-  margin-bottom: 3em;
+.accordion {
+  border-radius: 6px;
+  width: 1em;
+  text-align: center;
+
+  display: block;
+  cursor: pointer;
+  font-size: 2em;
+  font-family: var(--headers-font);
+  transition-duration: 0.2s;
+}
+
+.accordion:hover {
+  background: var(--separator-color);
+  border-color: var(--extra-color);
+  box-shadow: 0 0 6px var(--extra-color);
+}
+
+.accordion-content {
+  position: fixed;
+  background: var(--main-background-lighter-color);
+  border: 1px solid var(--extra-color);
+  border-radius: 6px;
+  box-shadow: 0 0 6px var(--extra-color);
+  padding: 0.6em 0.8em;
+  display: none;
+  list-style: none;
+  z-index: 100;
+  width: 200px;
+}
+
+.accordion-content li {
+  padding: 0.4em 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.accordion-content li:hover {
+  color: var(--extra-color);
+}
+
+/* ssssssssssssssssssssss */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.search-box label {
+  font-family: var(--headers-font);
+  font-size: 1.1em;
+}
+
+.search-box input {
+  padding: 0.5em 0.8em;
+  background: var(--main-background-lighter-color);
+  border: 1px solid var(--separator-color);
+  border-radius: 6px;
+  color: var(--main-color);
+  outline: none;
+  transition: 0.25s;
+}
+
+.search-box input:focus {
+  border-color: var(--extra-color);
+  box-shadow: 0 0 6px var(--extra-color);
 }
 
 @media (max-width: 600px) {

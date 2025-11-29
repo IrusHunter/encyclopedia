@@ -3,7 +3,6 @@ select [value="error"] {
 }
 
 main {
-  padding: 1em;
   max-width: 800px;
   margin: auto;
 }
@@ -103,8 +102,39 @@ form button:hover {
   box-shadow: 0 0 12px var(--extra-color);
 }
 
+.tooltip {
+  position: fixed;
+  background: var(--main-background-lighter-color);
+  color: var(--main-color);
+  border: 1px solid var(--extra-color);
+  padding: 0.6em 0.8em;
+  border-radius: 6px;
+  box-shadow: 0 0 6px var(--extra-color);
+  font-size: 0.9em;
+  white-space: normal;
+  width: 20%;
+  max-width: 250px;
+  display: none;
+  z-index: 100;
+  transition-duration: 0.2s;
+  right: 10%;
+}
+
+.tooltip-visible {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+#detail {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   fieldset {
     padding: 1.5em 0.5em;
+  }
+
+  .tooltip {
+    right: 1em;
   }
 }

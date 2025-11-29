@@ -40,6 +40,12 @@ header {
   /* margin-bottom: 5%; */
   position: static;
   z-index: 100;
+  overflow: hidden;
+  position: relative;
+}
+
+header * {
+  z-index: 1;
 }
 
 header > a {
@@ -72,6 +78,7 @@ nav a:hover {
 
 main {
   min-height: 100vh;
+  margin-top: 1em;
 }
 
 footer {
