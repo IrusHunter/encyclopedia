@@ -129,6 +129,11 @@ form button:hover {
   position: relative;
 }
 
+#detail-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   fieldset {
     padding: 1.5em 0.5em;

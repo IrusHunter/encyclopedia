@@ -1,18 +1,21 @@
-const detail = document.getElementById("detail");
+(function () {
+  const $detail = $("#detail");
+  const $main = $("#content");
 
-const tooltip = document.createElement("div");
-tooltip.innerText = "Ваша думка для нас важлива! Конкретизуйте мету звернення, будь ласка.";
-tooltip.classList.add("tooltip");
+  const $tooltip = $("<div>")
+    .text("Ваша думка для нас важлива! Конкретизуйте мету звернення, будь ласка.")
+    .addClass("tooltip")
+    .appendTo($detail);
 
-document.body.appendChild(tooltip);
+  $detail.on("mouseenter", function () {
+    $tooltip.addClass("tooltip-visible");
+    const rect = this.getBoundingClientRect();
+    $tooltip.css({ top: rect.top + "px" });
+    const newLeft = rect.right - $tooltip[0].getBoundingClientRect().width;
+    $tooltip.css({ left: newLeft + "px" });
+  });
 
-detail.addEventListener("mouseenter", (e) => {
-  const rect = detail.getBoundingClientRect();
-  tooltip.style.top = rect.top + "px";
-
-  tooltip.classList.add("tooltip-visible");
-});
-
-detail.addEventListener("mouseleave", () => {
-  tooltip.classList.remove("tooltip-visible");
-});
+  $detail.on("mouseleave", function () {
+    $tooltip.removeClass("tooltip-visible");
+  });
+})();
